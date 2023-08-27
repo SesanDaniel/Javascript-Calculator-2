@@ -1,0 +1,23 @@
+{
+  "name": "javascript-calculator-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/SesanDaniel/Javascript-Calculator-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SesanDaniel/Javascript-Calculator-2/issues"
+  },
+  "homepage": "https://github.com/SesanDaniel/Javascript-Calculator-2#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
