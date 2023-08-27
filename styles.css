@@ -20,56 +20,53 @@ body {
   height: 100vh;
 }
 
-
-
 .main {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: repeat(4, 10rem);
-    grid-template-rows: minmax(10rem, auto) repeat(5, 10rem);
-    margin-top: 5rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 10rem);
+  grid-template-rows: minmax(10rem, auto) repeat(5, 10rem);
+  margin-top: 5rem;
 }
 
 button {
-    cursor: pointer;
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, .75);
-    outline: none;
-    font-size: 2rem;
+  cursor: pointer;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.75);
+  outline: none;
+  font-size: 2rem;
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, .05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .span {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .equal {
-    background-color: #9932cc;
+  background-color: #9932cc;
 }
 
 .display {
-    grid-column: 1/ -1;
-    background-color: rgba(0, 0, 0, .75);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 3rem;
+  grid-column: 1/ -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 3rem;
 }
 
 .display > .first-operand {
-    color: grey;
-    font-size: 2rem;
- }
- 
- .display > .current-operand {
-     word-wrap: break-word;
-     word-break: break-all;
-     color: white;
-     font-size: 2rem;
- }
+  color: grey;
+  font-size: 2rem;
+}
 
+.display > .current-operand {
+  word-wrap: break-word;
+  word-break: break-all;
+  color: white;
+  font-size: 2rem;
+}
