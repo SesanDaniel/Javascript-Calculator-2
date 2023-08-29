@@ -50,37 +50,55 @@ function selectOperator(sign) {
     return;
   }
   if (previousOperand.textContent != "") {
-    compute();
+    operators.textContent = sign;
   }
   operators.textContent = sign;
-  previousOperand.textContent = currentOperand;
+  previousOperand.textContent = currentOperand.textContent;
   currentOperand.textContent = "";
 }
 
-function compute() {
-  let compute;
-  const firstNumber = parseFloat(previousOperand);
-  const currentNumber = parseFloat(currentOperand);
+function calculate() {
+  let computed;
+  const firstNumber = parseFloat(previousOperand.textContent);
+  const currentNumber = parseFloat(currentOperand.textContent);
   if (isNaN(firstNumber) || isNaN(currentNumber)) return;
 
-  switch (operators) {
+  switch (operators.textContent) {
     case "+":
-      compute = firstNumber + currentNumber;
+      computed = firstNumber + currentNumber;
       break;
     case "-":
-      compute = firstNumber - currentNumber;
+      computed = firstNumber - currentNumber;
       break;
     case "*":
-      compute = firstNumber * currentNumber;
+      computed = firstNumber * currentNumber;
       break;
     case "/":
-      compute = firstNumber / currentNumber;
+      computed = firstNumber / currentNumber;
       break;
+      default:
+        return;
   }
+    currentOperand.textContent = computed;
+    previousOperand.textContent = '';
+    operators.textContent = undefined;
+    console.log(currentOperand.textContent)
 }
 
 operators.forEach((operator) => {
-    operator.addEventListener('click', () => {
-        selectOperator(operators.textContent)
-    })
-})
+  operator.addEventListener("click", () => {
+    selectOperator(operators.textContent);
+  });
+});
+
+// function displayResult(result) {
+//     currentOperand.textContent = result;
+//     previousOperand.textContent = '';
+//     operators.textContent = undefined;
+// }
+
+
+equality.addEventListener("click", () => {
+    /* const resultText = */  calculate()
+    // displayResult(resultText)
+});

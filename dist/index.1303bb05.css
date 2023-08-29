@@ -18,7 +18,7 @@ body {
   grid-template-rows: minmax(10rem, auto) repeat(5, 10rem);
   grid-template-columns: repeat(4, 10rem);
   place-content: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: grid;
 }
 
@@ -27,7 +27,9 @@ button {
   background-color: #ffffffbf;
   border: 1px solid #fff;
   outline: none;
+  font-family: serif, sans-serif;
   font-size: 2rem;
+  font-style: italic;
 }
 
 button:hover {
@@ -48,12 +50,13 @@ button:hover {
   grid-column: 1 / -1;
   justify-content: space-around;
   align-items: flex-end;
-  padding: 3rem;
+  row-gap: 1rem;
+  padding: 1.8rem;
   display: flex;
 }
 
-.display > .first-operand {
-  color: gray;
+.display > .previous-operand {
+  color: #a0a0a0;
   font-size: 2rem;
 }
 
@@ -61,7 +64,7 @@ button:hover {
   word-wrap: break-word;
   word-break: break-all;
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 /*# sourceMappingURL=index.1303bb05.css.map */

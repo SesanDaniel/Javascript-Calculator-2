@@ -26,7 +26,7 @@ body {
   align-content: center;
   grid-template-columns: repeat(4, 10rem);
   grid-template-rows: minmax(10rem, auto) repeat(5, 10rem);
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 button {
@@ -35,6 +35,8 @@ button {
   background-color: rgba(255, 255, 255, 0.75);
   outline: none;
   font-size: 2rem;
+  font-style: italic;
+  font-family: serif, sans-serif;
 }
 
 button:hover {
@@ -56,11 +58,12 @@ button:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
-  padding: 3rem;
+  padding: 1.8rem;
+  row-gap: 1rem;
 }
 
-.display > .first-operand {
-  color: grey;
+.display > .previous-operand {
+  color: rgb(160, 160, 160);
   font-size: 2rem;
 }
 
@@ -68,5 +71,5 @@ button:hover {
   word-wrap: break-word;
   word-break: break-all;
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
