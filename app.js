@@ -6,13 +6,14 @@ const numbers = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
 const root = document.querySelector(".operatorSqrt")
 const equality = document.querySelector(".equal");
+const negative = document.querySelector(".negate")
 let currentOperand = document.querySelector(".current-operand");
 let previousOperand = document.querySelector(".previous-operand");
 
 
 // Function to display current clicked number 
 function displayCurrentOperand(input) {
-  currentOperand.textContent += input;
+    currentOperand.textContent += input;
 }
 
 // Function to display previuosly clicked number
@@ -121,3 +122,13 @@ root.addEventListener("click", () => {
 equality.addEventListener("click", () => {
     calculate()
 });
+
+// Function to prepend negative sign to numbers when needed
+function negate() {
+  currentOperand.textContent = "-" + currentOperand.textContent
+}
+
+// Event listener to display prepended nagative sign
+negative.addEventListener("click", () => {
+  negate()
+})
