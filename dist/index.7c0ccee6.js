@@ -71,7 +71,7 @@ function calculate() {
 }
 operators.forEach((operator)=>{
     operator.addEventListener("click", ()=>{
-        selectOperator(operators.textContent);
+        selectOperator(operator.textContent);
     });
 });
 // function displayResult(result) {

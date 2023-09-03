@@ -4,6 +4,7 @@ const displayClear = document.querySelector(".displayClear");
 const deleteDisplay = document.querySelector(".delete");
 const numbers = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
+const root = document.querySelector(".operatorSqrt")
 const equality = document.querySelector(".equal");
 let currentOperand = document.querySelector(".current-operand");
 let previousOperand = document.querySelector(".previous-operand");
@@ -76,6 +77,9 @@ function calculate() {
     case "/":
       computed = firstNumber / currentNumber;
       break;
+    case "**":
+      computed = firstNumber ** currentNumber;
+      break;
       default:
         return;
   }
@@ -87,9 +91,19 @@ function calculate() {
 
 operators.forEach((operator) => {
   operator.addEventListener("click", () => {
-    selectOperator(operators.textContent);
+    selectOperator(operator.textContent);
   });
 });
+
+function calculateSquareRoot(num) {
+    if(num != "") {
+      return Math.sqrt(parseFloat(num))
+    }
+}
+
+root.addEventListener("click", () => {
+  currentOperand.textContent = calculateSquareRoot(currentOperand.textContent)
+})
 
 // function displayResult(result) {
 //     currentOperand.textContent = result;
