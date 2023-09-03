@@ -9,14 +9,18 @@ const equality = document.querySelector(".equal");
 let currentOperand = document.querySelector(".current-operand");
 let previousOperand = document.querySelector(".previous-operand");
 
+
+// Function to display current clicked number 
 function displayCurrentOperand(input) {
   currentOperand.textContent += input;
 }
 
+// Function to display previuosly clicked number
 function displayPreviousOperand(input) {
   previousOperand.textContent += input;
 }
 
+// Event listener to handle numbers click
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
     const userInput = number.textContent;
@@ -24,16 +28,19 @@ numbers.forEach((number) => {
   });
 });
 
+// Function to Clear all contents at once
 function allClear() {
   currentOperand.textContent = "";
   previousOperand.textContent = "";
   operators.textContent = undefined;
 }
 
+// Event Listeners to handle all clear button
 displayClear.addEventListener("click", () => {
   allClear();
 });
 
+// Function to delete dpsplayed contents
 function toDelete() {
   const currentText = currentOperand.textContent.toString();
   if (currentText.length > 0) {
@@ -42,10 +49,12 @@ function toDelete() {
   }
 }
 
+// Event listener to handle delete button
 deleteDisplay.addEventListener("click", () => {
   toDelete();
 });
 
+//function to select operators
 function selectOperator(sign) {
   if (currentOperand.textContent === "") {
     return;
@@ -58,6 +67,7 @@ function selectOperator(sign) {
   currentOperand.textContent = "";
 }
 
+//function to calculate values based on provided operators
 function calculate() {
   let computed;
   const firstNumber = parseFloat(previousOperand.textContent);
@@ -95,24 +105,19 @@ operators.forEach((operator) => {
   });
 });
 
+//function to calculate the squareroot of numbers 
 function calculateSquareRoot(num) {
     if(num != "") {
       return Math.sqrt(parseFloat(num))
     }
 }
 
+//The event listener to handle the squareroot function and display it
 root.addEventListener("click", () => {
   currentOperand.textContent = calculateSquareRoot(currentOperand.textContent)
 })
 
-// function displayResult(result) {
-//     currentOperand.textContent = result;
-//     previousOperand.textContent = '';
-//     operators.textContent = undefined;
-// }
-
-
+//The event listener to display computed values when calculated
 equality.addEventListener("click", () => {
-    /* const resultText = */  calculate()
-    // displayResult(resultText)
+    calculate()
 });
